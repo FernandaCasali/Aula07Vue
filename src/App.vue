@@ -12,7 +12,7 @@ const incrementClick = () => {
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/girls.png" width="300" height="300" />
 
     <div class="wrapper">
       <HelloWorld msg="Você conseguiu!" />
@@ -23,9 +23,9 @@ const incrementClick = () => {
     <TheWelcome />
     <div class="counter">
       <!-- Texto com cor alternada -->
-      <p :class="clickCount % 2 === 0 ? 'blue-text' : 'red-text'">
+      <h4 :class="clickCount % 2 === 0 ? 'blue-text' : 'red-text'">
         Contador de cliques: {{ clickCount }}
-      </p>
+      </h4>
       <button @click="incrementClick">Clique aqui</button>
     </div>
   </main>
@@ -48,7 +48,7 @@ header {
 
 button {
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 3rem;
   margin-top: 1rem;
   cursor: pointer;
 }
