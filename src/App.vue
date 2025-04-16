@@ -22,13 +22,11 @@ const incrementClick = () => {
   <main>
     <TheWelcome />
     <div class="counter">
-      <p>Contador de cliques: {{ clickCount }}</p>
-      <button
-        @click="incrementClick"
-        :class="clickCount % 2 === 0 ? 'blue-button' : 'red-button'"
-      >
-        Clique aqui
-      </button>
+      <!-- Texto com cor alternada -->
+      <p :class="clickCount % 2 === 0 ? 'blue-text' : 'red-text'">
+        Contador de cliques: {{ clickCount }}
+      </p>
+      <button @click="incrementClick">Clique aqui</button>
     </div>
   </main>
 </template>
@@ -48,23 +46,20 @@ header {
   margin-top: 2rem;
 }
 
-/* Estilos para os botões */
 button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   margin-top: 1rem;
   cursor: pointer;
-  border: none;
-  color: white;
-  transition: background-color 0.3s ease;
 }
 
-.blue-button {
-  background-color: #007bff;
+/* Cores alternadas para o texto */
+.blue-text {
+  color: #007bff;
 }
 
-.red-button {
-  background-color: #dc3545;
+.red-text {
+  color: #dc3545;
 }
 
 @media (min-width: 1024px) {
