@@ -55,11 +55,11 @@ button {
 
 /* Cores alternadas para o texto */
 .blue-text {
-  color: #007bff;
+  color: #9623fa;
 }
 
 .red-text {
-  color: #dc3545;
+  color: #fa236b;
 }
 
 @media (min-width: 1024px) {
