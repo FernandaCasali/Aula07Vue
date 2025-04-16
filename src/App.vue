@@ -23,9 +23,9 @@ const incrementClick = () => {
     <TheWelcome />
     <div class="counter">
       <!-- Texto com cor alternada -->
-      <h4 :class="clickCount % 2 === 0 ? 'blue-text' : 'red-text'">
+      <h2 :class="clickCount % 2 === 0 ? 'blue-text' : 'red-text'">
         Contador de cliques: {{ clickCount }}
-      </h4>
+      </h2>
       <button @click="incrementClick">Clique aqui</button>
     </div>
   </main>
@@ -59,7 +59,7 @@ button {
 }
 
 .red-text {
-  color: #fa236b;
+  color: #5488b8;
 }
 
 @media (min-width: 1024px) {
