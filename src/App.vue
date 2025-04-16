@@ -1,6 +1,13 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { ref } from 'vue'
+
+// Contador reativo
+const clickCount = ref(0)
+
+// Função que incrementa o contador
+const incrementClick = () => {
+  clickCount.value++
+}
 </script>
 
 <template>
@@ -8,12 +15,16 @@ import TheWelcome from './components/TheWelcome.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="Você conseguiu!" />
     </div>
   </header>
 
   <main>
     <TheWelcome />
+    <div class="counter">
+      <p>Contador de cliques: {{ clickCount }}</p>
+      <button @click="incrementClick">Clique aqui</button>
+    </div>
   </main>
 </template>
 
@@ -25,6 +36,18 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+}
+
+.counter {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {
